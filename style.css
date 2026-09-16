@@ -426,7 +426,7 @@ html[data-theme="dark"]  .icon-moon{ display:none; }
 .timeline .chip{ margin-top:.5rem; }
 
 /* =========================================================
-   11. SKILLS
+   11. GRIDS
    ========================================================= */
 .grid-3{
   display:grid;
@@ -434,6 +434,16 @@ html[data-theme="dark"]  .icon-moon{ display:none; }
   gap: clamp(18px, 2.5vw, 26px);
 }
 
+/* Grid khusus proyek → 2 kolom (2×2) */
+.grid-2{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(20px, 3vw, 30px);
+}
+
+/* =========================================================
+   12. SKILLS
+   ========================================================= */
 .card__icon{
   width:46px; height:46px;
   display:grid;
@@ -449,7 +459,7 @@ html[data-theme="dark"]  .icon-moon{ display:none; }
 .skill-card p{ color:var(--muted); font-size:.88rem; margin-bottom:1rem; }
 
 /* =========================================================
-   12. EXPERIENCE
+   13. EXPERIENCE
    ========================================================= */
 .exp{
   display:grid;
@@ -480,23 +490,47 @@ html[data-theme="dark"]  .icon-moon{ display:none; }
 }
 
 /* =========================================================
-   13. PROJECTS
+   14. PROJECTS
    ========================================================= */
-.project{ display:flex; flex-direction:column; }
+.project{
+  display:flex;
+  flex-direction:column;
+  padding: clamp(1.4rem, 3.2vw, 2rem);
+}
 
 .project__top{
   display:flex;
   align-items:center;
   justify-content:space-between;
   gap:1rem;
-  margin-bottom:1rem;
+  margin-bottom:1.2rem;
 }
-.project h3{ font-size:1.12rem; margin-bottom:.6rem; }
-.project p{ color:var(--muted); font-size:.92rem; }
-.project .chips{ margin-top:auto; padding-top:1.2rem; }
+
+.project h3{
+  font-size: clamp(1.15rem, 2vw, 1.35rem);
+  margin-bottom:.75rem;
+  line-height:1.25;
+}
+
+.project p{
+  color:var(--muted);
+  font-size:.95rem;
+  line-height:1.65;
+  margin-bottom:1.1rem;
+}
+
+.project .chips{
+  margin-top:auto;
+  padding-top:.3rem;
+}
+
+.project .btn{
+  margin-top:1.4rem;
+  align-self:flex-start;
+}
 
 /* =========================================================
-   14. CERTIFICATIONS
+   15. CERTIFICATIONS
    ========================================================= */
 .cert{
   display:flex;
@@ -508,7 +542,7 @@ html[data-theme="dark"]  .icon-moon{ display:none; }
 .cert .btn{ margin-top:auto; align-self:flex-start; }
 
 /* =========================================================
-   15. CONTACT + FORM
+   16. CONTACT + FORM
    ========================================================= */
 .contact__grid{
   display:grid;
@@ -610,7 +644,7 @@ html[data-theme="dark"]  .icon-moon{ display:none; }
 .form__success.is-visible{ display:flex; }
 
 /* =========================================================
-   16. FOOTER
+   17. FOOTER
    ========================================================= */
 .footer{
   border-top:3px solid var(--border);
@@ -628,7 +662,7 @@ html[data-theme="dark"]  .icon-moon{ display:none; }
 }
 
 /* =========================================================
-   17. BACK TO TOP
+   18. BACK TO TOP
    ========================================================= */
 .to-top{
   position:fixed;
@@ -658,7 +692,7 @@ html[data-theme="dark"]  .icon-moon{ display:none; }
 .to-top:hover{ box-shadow:6px 6px 0 var(--border); }
 
 /* =========================================================
-   18. SCROLL REVEAL (default)
+   19. SCROLL REVEAL (default)
    ========================================================= */
 [data-reveal]{
   opacity:0;
@@ -674,7 +708,7 @@ html[data-theme="dark"]  .icon-moon{ display:none; }
 }
 
 /* =========================================================
-   19. RESPONSIVE
+   20. RESPONSIVE
    ========================================================= */
 @media (max-width: 980px){
   .hero__grid,
@@ -682,6 +716,11 @@ html[data-theme="dark"]  .icon-moon{ display:none; }
   .contact__grid{ grid-template-columns:1fr; }
 
   .hero__card{ max-width:520px; }
+}
+
+/* Grid proyek jadi 1 kolom di tablet ke bawah */
+@media (max-width: 780px){
+  .grid-2{ grid-template-columns: 1fr; }
 }
 
 @media (max-width: 860px){
@@ -722,7 +761,7 @@ html[data-theme="dark"]  .icon-moon{ display:none; }
 }
 
 /* =========================================================
-   20. REDUCED MOTION
+   21. REDUCED MOTION
    ========================================================= */
 @media (prefers-reduced-motion: reduce){
   html{ scroll-behavior:auto; }

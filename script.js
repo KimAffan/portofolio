@@ -65,7 +65,7 @@
   });
 
   /* =======================================================
-     3. SCROLL REVEAL (IntersectionObserver)
+     3. SCROLL REVEAL
      ======================================================= */
   var revealEls = document.querySelectorAll('[data-reveal]');
 
@@ -221,11 +221,6 @@
       if (firstBad) firstBad.focus();
       return;
     }
-
-    /* ---------------------------------------------------
-       Integrasi backend: ganti blok ini dengan fetch()
-       ke Formspree / EmailJS / endpoint milikmu.
-       --------------------------------------------------- */
 
     successBox.classList.add('is-visible');
     form.reset();

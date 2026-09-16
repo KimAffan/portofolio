@@ -66,8 +66,6 @@
 
   /* =======================================================
      3. SCROLL REVEAL (IntersectionObserver)
-        → rootMargin lebih longgar agar animasi mulai lebih awal,
-          dan elemen baru muncul setelah benar-benar terlihat.
      ======================================================= */
   var revealEls = document.querySelectorAll('[data-reveal]');
 
@@ -80,7 +78,7 @@
         }
       });
     }, {
-      threshold: 0.08,
+      threshold: 0.12,
       rootMargin: '0px 0px -60px 0px'
     });
 
@@ -227,13 +225,6 @@
     /* ---------------------------------------------------
        Integrasi backend: ganti blok ini dengan fetch()
        ke Formspree / EmailJS / endpoint milikmu.
-
-       Contoh:
-       fetch('https://formspree.io/f/XXXX', {
-         method: 'POST',
-         headers: { 'Accept': 'application/json' },
-         body: new FormData(form)
-       });
        --------------------------------------------------- */
 
     successBox.classList.add('is-visible');

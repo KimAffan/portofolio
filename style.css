@@ -10,7 +10,7 @@
   --text:      #141414;
   --muted:     #6B675F;
   --border:    #141414;
-  --accent:    #22D3EE;
+  --accent:    #22D3EE;   /* 🎨 CYAN — sebelumnya #FFD23F */
   --green:     #22C55E;
   --danger:    #D64545;
 
@@ -434,7 +434,6 @@ html[data-theme="dark"]  .icon-moon{ display:none; }
   gap: clamp(18px, 2.5vw, 26px);
 }
 
-/* Grid khusus proyek → 2 kolom (2×2) */
 .grid-2{
   display:grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -692,7 +691,7 @@ html[data-theme="dark"]  .icon-moon{ display:none; }
 .to-top:hover{ box-shadow:6px 6px 0 var(--border); }
 
 /* =========================================================
-   19. SCROLL REVEAL (default)
+   19. SCROLL REVEAL
    ========================================================= */
 [data-reveal]{
   opacity:0;
@@ -718,7 +717,6 @@ html[data-theme="dark"]  .icon-moon{ display:none; }
   .hero__card{ max-width:520px; }
 }
 
-/* Grid proyek jadi 1 kolom di tablet ke bawah */
 @media (max-width: 780px){
   .grid-2{ grid-template-columns: 1fr; }
 }
